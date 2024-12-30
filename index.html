@@ -3,72 +3,128 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Samut Prakan Travel</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-    <header >
-      <nav>
-        <ul>
-            <li>
-            <a href="index.html" class="active"><strong>SPK</strong></a>
-            </li>
-            <li><a href="index.html" class="box1-link">Home</a></li>
-            <li><a href="tavel.html" class="box1-link">Tavel</a></li>
-            <li><a href="contact.html" class="box1-link">Contact</a></li>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">SPK Travel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="travel.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
 
-            <div class="wrapper" onclick="toggleMenu()">
-                <div class="bar top"></div>
-                <div class="bar middle"></div>
-                <div class="bar bottom"></div>
-              </div>
-              <div class="menu">
-                <a href="index.html" style="color: black">Home</a>
-                <a href="tavel.html" style="color: black">Tavel</a>
-                <a href="contact.html" style="color: black">Contact</a>
-              </div>
-        </ul>
-      </nav>
-    </header>
-    <main>
-        <h1>จังหวัด สมุทรปราการ</h1>
-        <p>
-          สมุทรปราการ เป็นจังหวัดหนึ่งในภาคกลางของประเทศไทย
-          และยังเป็นจังหวัดในเขตปริมณฑลของกรุงเทพมหานคร
-        </p>
-        <p>
-          ในด้านเศรษฐกิจ จังหวัดสมุทรปราการมีการทำนา, ประมง และอุตสาหกรรม
-          แหล่งท่องเที่ยวและสถานที่สำคัญ
-        </p>
-        <p>
-          เช่น ท่าอากาศยานสุวรรณภูมิ, พระสมุทรเจดีย์กลางน้ำ, วัดอโศการาม,
-          วัดบางพลีใหญ่, วัดไพชยนต์พลเสพราชวรวิหาร,
-        </p>
-        <p>
-          วัดโปรดเกศเชษฐาราม, ศาลพระเสื้อเมือง, พิพิธภัณฑ์ทหารเรือ, เมืองโบราณ,
-          สถานตากอากาศบางปู, ป้อมพระจุลจอมเกล้า,
-        </p>
-        <p>สวางคนิวาส, ป้อมแผลงไฟฟ้า, ฟาร์มจระเข้ ฯลฯ</p>
-        <h2>คุณอยากที่จะเที่ยวสมุทรปราการมั้ยล่ะ</h2>
-        <h2>ให้เราแนะนำคุณไหม?</h2>
-        <h2 style="color: red;">กดที่รูปสิ</h2>
-          <a href="tavel.html">
-            <img class="image" src="image/checkinchill-19102023.jpg" /> <!--ที่มาhttps://www.checkinchill.com/content/samutprakan-travel/-->
-          </a>  
-      </main>
-      <footer>
-        
-      </footer>
-      <script>
-        // toggleMenu: แสดง/ซ่อน dropdown menu เมื่อคลิก hamburger icon
-        function toggleMenu() {
-            const wrapper = document.querySelector('.wrapper');
-            const menu = document.querySelector('.menu');
-            
-            wrapper.classList.toggle('active');
-            menu.classList.toggle('show');
-        }</script>
+    <!-- Hero Section -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="image" src="image\25c11130-1726-11ee-af7d-1565291eabcb_webp_original.webp" >
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Welcome to Samut Prakan</h5>
+            <p>Explore the beauty of this province.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="image" src="image\42287300-1725-11ee-b14b-87fe35595a48_webp_original.webp" >
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Beautiful Landmarks</h5>
+            <p>Discover amazing attractions.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="image" src="image\166174688113385.jpg" >
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Cultural Experiences</h5>
+            <p>Immerse yourself in local traditions.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+            <img class="image" src="image\be781c10-1727-11ee-8c62-dd01964e1816_webp_original.webp" >
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Cultural Experiences</h5>
+              <p>Immerse yourself in local traditions.</p>
+            </div>
+          </div><div class="carousel-item">
+            <img class="image" src="image\licensed-image.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Cultural Experiences</h5>
+              <p>Immerse yourself in local traditions.</p>
+            </div>
+          </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- Grid Section -->
+    <div class="container my-5">
+      <h2>Top Attractions</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+        <div class="col">
+          <div class="card">
+            <img  src="image\checkinchill-19102023.jpg" class="card-img-top" alt="..."></img>
+            <div class="card-body">
+              <h5 class="card-title">Attraction Name</h5>
+              <p class="card-text">Short description of the attraction.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat similar cards for 7 more attractions -->
+      </div>
+    </div>
+
    
-   
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5">
+      <div class="container py-4">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Contact Info</h5>
+            <p>Address, Phone, Email</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Follow Us</h5>
+            <a href="#" class="text-white me-2">Facebook</a>
+            <a href="#" class="text-white">Instagram</a>
+          </div>
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <a href="#" class="text-white">Home</a><br>
+            <a href="#" class="text-white">About</a>
+          </div>
+        </div>
+        <div class="text-center mt-3">&copy; 2024 SPK Travel. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

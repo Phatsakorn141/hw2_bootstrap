@@ -75,13 +75,14 @@ header {
   }
   .image {
     display: block; /* ทำให้ภาพเป็นบล็อก */
+    margin: 0 auto; /* จัดกึ่งกลาง */
     max-width: 100%; /* จำกัดขนาดภาพไม่เกินความกว้างของจอ */
     height: auto; /* รักษาอัตราส่วนของภาพ */
-    margin: 0 auto; /* จัดกึ่งกลาง */
     border: 5px solid #ffcc00; /* เพิ่มกรอบ */
     border-radius: 10px; /* ทำมุมภาพโค้ง */
     animation: slideIn 1s ease-out;
   }
+  
   
   p {
     text-indent: 50px;
@@ -254,4 +255,8 @@ header {
       opacity: 1;
     }
   }
+  .carousel-item {
+    text-align: center;
+  }
+  
   
