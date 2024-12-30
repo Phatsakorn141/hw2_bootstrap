@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header >
+      <nav>
+        <ul>
+            <li>
+            <a href="index.html" class="active"><strong>SPK</strong></a>
+            </li>
+            <li><a href="index.html" class="box1-link">Home</a></li>
+            <li><a href="tavel.html" class="box1-link">Tavel</a></li>
+            <li><a href="contact.html" class="box1-link">Contact</a></li>
+
+            <div class="wrapper" onclick="toggleMenu()">
+                <div class="bar top"></div>
+                <div class="bar middle"></div>
+                <div class="bar bottom"></div>
+              </div>
+              <div class="menu">
+                <a href="index.html" style="color: black">Home</a>
+                <a href="tavel.html" style="color: black">Tavel</a>
+                <a href="contact.html" style="color: black">Contact</a>
+              </div>
+        </ul>
+      </nav>
+    </header>
+    <main>
+        <h1>จังหวัด สมุทรปราการ</h1>
+        <p>
+          สมุทรปราการ เป็นจังหวัดหนึ่งในภาคกลางของประเทศไทย
+          และยังเป็นจังหวัดในเขตปริมณฑลของกรุงเทพมหานคร
+        </p>
+        <p>
+          ในด้านเศรษฐกิจ จังหวัดสมุทรปราการมีการทำนา, ประมง และอุตสาหกรรม
+          แหล่งท่องเที่ยวและสถานที่สำคัญ
+        </p>
+        <p>
+          เช่น ท่าอากาศยานสุวรรณภูมิ, พระสมุทรเจดีย์กลางน้ำ, วัดอโศการาม,
+          วัดบางพลีใหญ่, วัดไพชยนต์พลเสพราชวรวิหาร,
+        </p>
+        <p>
+          วัดโปรดเกศเชษฐาราม, ศาลพระเสื้อเมือง, พิพิธภัณฑ์ทหารเรือ, เมืองโบราณ,
+          สถานตากอากาศบางปู, ป้อมพระจุลจอมเกล้า,
+        </p>
+        <p>สวางคนิวาส, ป้อมแผลงไฟฟ้า, ฟาร์มจระเข้ ฯลฯ</p>
+        <h2>คุณอยากที่จะเที่ยวสมุทรปราการมั้ยล่ะ</h2>
+        <h2>ให้เราแนะนำคุณไหม?</h2>
+        <h2 style="color: red;">กดที่รูปสิ</h2>
+          <a href="tavel.html">
+            <img class="image" src="image/checkinchill-19102023.jpg" /> <!--ที่มาhttps://www.checkinchill.com/content/samutprakan-travel/-->
+          </a>  
+      </main>
+      <footer>
+        
+      </footer>
+      <script>
+        // toggleMenu: แสดง/ซ่อน dropdown menu เมื่อคลิก hamburger icon
+        function toggleMenu() {
+            const wrapper = document.querySelector('.wrapper');
+            const menu = document.querySelector('.menu');
+            
+            wrapper.classList.toggle('active');
+            menu.classList.toggle('show');
+        }</script>
+   
+   
+  </body>
+</html>
