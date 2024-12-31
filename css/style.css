@@ -1,14 +1,4 @@
-header {
-    background: linear-gradient(45deg, #ea3636, #ff5f5f, #ff8c8c);
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between; /* กระจายเนื้อหาภายใน header */
-    align-items: center;
-    width: 100%;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    animation: slideIn 1s ease-out;
-  }
+
   
   nav ul {
     display: flex;
@@ -172,6 +162,15 @@ header {
   .menu.show {
     display: block;
   }
+  .custom-grid {
+    display: grid;
+    gap: 16px;
+  }
+
+  /* Mobile: 1 column */
+  .custom-grid {
+    grid-template-columns: 1fr;
+  }
   /* สํ
     าหรับแท็บเล็ต */
   @media (max-width: 768px) {
@@ -201,7 +200,18 @@ header {
       left: 10px;
       right: 10px;
     }
-  }
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .custom-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .row-cols-sm-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+}
+      
+  
   /* สํ
        าหรับมือถือ */
   @media (max-width: 480px) {
@@ -234,6 +244,11 @@ header {
     .image {
       max-width: 90%; /* ลดขนาดภาพให้พอดีกับมือถือ */
     }
+    @media (min-width: 1024px) {
+        .custom-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
   }
   html,
   body {
@@ -319,7 +334,6 @@ header {
   
   /* ปรับขนาดตัวอักษร */
   .navbar-brand {
-    margin-left: -600%;
     font-size: 50px; /* ขนาดตัวอักษรของชื่อแบรนด์ */
   }
   
@@ -330,7 +344,9 @@ header {
     display: flex;
     align-items: center; /* จัดให้อยู่แนวเดียวกัน */
     justify-content: space-between; /* เว้นระยะห่างระหว่างกลุ่ม */
-    padding: 0.5rem 1rem; /* ระยะห่างภายใน */
+    padding: 1rem 1rem; /* ระยะห่างภายใน */
+    animation: slideIn 1s ease-out;
+    height: 20%;
   }
   
   /* ปรับ Padding ของ Navbar */
