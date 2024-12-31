@@ -3,119 +3,158 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ติดต่อเรา </title>
+    <title>ติดต่อเรา</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <a href="index.html" class="active"><strong>SPK</strong></a>
-          </li>
-          <li>
-            <a href="index.html" class="box1-link">Home</a>
-          </li>
-          <li><a href="tavel.html" class="box1-link">Tavel</a></li>
-          <li><a href="contact.html" class="box1-link">Contact</a></li>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container" style="justify-content: flex-start;">
+            <h1 >
+                <a class="navbar-brand" href="index.html" style="color: aliceblue; margin-left: 0;">
+                    SPK Travel
+                  </a>
+             
+            </h1>
+            <a class="box1-link" href="index.html">Home</a>
+            <a class="box1-link" href="travel.html">Travel</a>
+            <a class="box1-link" href="contact.html">Contact</a>
+            <form class="d-flex">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+            <div class="wrapper" onclick="toggleMenu()">
+              <div class="bar top"></div>
+              <div class="bar middle"></div>
+              <div class="bar bottom"></div>
+            </div>
+            <div class="menu">
+              <a href="index.html" style="color: black">Home</a>
+              <a href="travel.html" style="color: black">Tavel</a>
+              <a href="contact.html" style="color: black">Contact</a>
+              <form class="d-flex">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+    </nav>
 
-          <div class="wrapper" onclick="toggleMenu()">
-            <div class="bar top"></div>
-            <div class="bar middle"></div>
-            <div class="bar bottom"></div>
-          </div>
-          <div class="menu">
-            <a href="index.html" style="color: black">Home</a>
-            <a href="tavel.html" style="color: black">Tavel</a>
-            <a href="contact.html" style="color: black">Contact</a>
-          </div>
-        </ul>
-      </nav>
-    </header>
-    <main role="main">
+    <!-- Main Content -->
+    <main role="main" class="container mt-4">
       <section class="form-container">
-        <h2 class="special-heading">ส่งข้อความถึงเรา</h2>
-        <form
-          action="/submit"
-          method="POST"
-          role="form"
-          aria-label="แบบฟอร์มติดต่อ"
-        >
-          <div class="form-group">
-            <label for="fullname">ชื่อ-นามสกุล *</label>
+        <h2 class="text-center mb-4">ส่งข้อความถึงเรา</h2>
+        <form action="/submit" method="POST" role="form" aria-label="แบบฟอร์มติดต่อ">
+          <div class="mb-3">
+            <label for="fullname" class="form-label">ชื่อ-นามสกุล *</label>
             <input
               type="text"
+              class="form-control"
               id="fullname"
               name="fullname"
               required
-              aria-required="true"
               minlength="2"
               maxlength="100"
               aria-describedby="fullname-help"
             />
-            <small id="fullname-help">กรุณากรอกชื่อและนามสกุลจริง</small>
+            <div id="fullname-help" class="form-text">กรุณากรอกชื่อและนามสกุลจริง</div>
           </div>
-          <div class="form-group">
-            <label for="email">อีเมล *</label>
+          <div class="mb-3">
+            <label for="email" class="form-label">อีเมล *</label>
             <input
               type="email"
+              class="form-control"
               id="email"
               name="email"
               required
-              aria-required="true"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               aria-describedby="email-help"
             />
-            <small id="email-help">ตัวอย่าง: example@domain.com</small>
+            <div id="email-help" class="form-text">ตัวอย่าง: example@domain.com</div>
           </div>
-          <div class="form-group">
-            <label for="tel">เบอร์โทรศัพท์</label>
+          <div class="mb-3">
+            <label for="tel" class="form-label">เบอร์โทรศัพท์</label>
             <input
               type="tel"
+              class="form-control"
               id="tel"
               name="tel"
               pattern="[0-9]{10}"
               aria-describedby="tel-help"
             />
-            <small id="tel-help"
-              >กรอกหมายเลข 10 หลัก ไม่ต้องมีขีด เช่น 0812345678</small
-            >
+            <div id="tel-help" class="form-text">กรอกหมายเลข 10 หลัก เช่น 0812345678</div>
           </div>
-          <div class="form-group">
-            <label for="message">ข้อความ *</label>
+          <div class="mb-3">
+            <label for="message" class="form-label">ข้อความ *</label>
             <textarea
+              class="form-control"
               id="message"
               name="message"
               required
-              aria-required="true"
               minlength="10"
               rows="5"
               aria-describedby="message-help"
             ></textarea>
-            <small id="message-help"
-              >กรุณากรอกข้อความอย่างน้อย 10 ตัวอักษร</small
-            >
+            <div id="message-help" class="form-text">กรุณากรอกข้อความอย่างน้อย 10 ตัวอักษร</div>
           </div>
-          <div class="form-group">
-            <button class="box1-link" type="submit" aria-label="ส่งข้อความ">
-              ส่งข้อความ
-            </button>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">ส่งข้อความ</button>
           </div>
         </form>
       </section>
     </main>
 
-    <footer role="contentinfo">
-      <p class="footer-text">&copy; 2024 เว็บเทคโนโลยี. สงวนลิขสิทธิ์.</p>
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Contact Info</h5>
+            <p>Address: Samut Prakan</p>
+            <p>Phone: 02-4586-589</p>
+            <p>Email: SamutPrakan@gmail.com</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Follow Us</h5>
+            <a href="#" class="text-white me-2">Facebook</a>
+            <a href="#" class="text-white">Instagram</a>
+          </div>
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <a href="index.html" class="text-white d-block">Home</a>
+            <a href="travel.html" class="text-white d-block">Travel</a>
+            <a href="contact.html" class="text-white d-block">Contact</a>
+          </div>
+        </div>
+        <div class="text-center mt-3">&copy; 2024 SPK Travel. All rights reserved.</div>
+      </div>
     </footer>
     <script>
         // toggleMenu: แสดง/ซ่อน dropdown menu เมื่อคลิก hamburger icon
         function toggleMenu() {
-            const wrapper = document.querySelector('.wrapper');
-            const menu = document.querySelector('.menu');
-            
-            wrapper.classList.toggle('active');
-            menu.classList.toggle('show');
-        }</script>
+          const wrapper = document.querySelector(".wrapper");
+          const menu = document.querySelector(".menu");
+  
+          wrapper.classList.toggle("active");
+          menu.classList.toggle("show");
+        }
+        </script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

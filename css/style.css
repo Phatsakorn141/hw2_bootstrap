@@ -1,400 +1,400 @@
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* ให้รองรับการพับลงเมื่อจอเล็ก */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 
-  
-  nav ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap; /* ให้รองรับการพับลงเมื่อจอเล็ก */
-    padding: 0;
-    margin: 0;
-    list-style: none;
+nav a {
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  align-items: center; /* จัดตำแหน่งข้อความในแนวตั้ง */
+  justify-content: center; /* จัดตำแหน่งข้อความในแนวนอน */
+  line-height: normal; /* ปรับให้ข้อความอยู่ในตำแหน่งที่พอดี */
+  padding: 10px 20px; /* เพิ่มระยะห่างภายใน */
+}
+
+nav a.active {
+  color: #fffb00;
+  font-size: 60px;
+  line-height: normal; /* ปรับความสูงของบรรทัดให้พอดี */
+  text-align: center;
+}
+.box1-link {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  text-align: center;
+  font-size: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.box1-link:hover {
+  background-color: #9babc0;
+  color: #000000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+main {
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #2e2e2e;
+  background-color: #ffffff;
+  padding: 1rem;
+  max-width: 800px;
+  animation: slideIn 1s ease-out;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.number {
+  text-align: start;
+}
+.image {
+  display: block; /* ทำให้ภาพเป็นบล็อก */
+  margin: 0 auto; /* จัดกึ่งกลาง */
+  max-width: 100%; /* จำกัดขนาดภาพไม่เกินความกว้างของจอ */
+  height: auto; /* รักษาอัตราส่วนของภาพ */
+  border: 5px solid #ffcc00; /* เพิ่มกรอบ */
+  border-radius: 10px; /* ทำมุมภาพโค้ง */
+  animation: slideIn 1s ease-out;
+}
+
+p {
+  text-indent: 50px;
+  font-size: larger;
+}
+.special-heading {
+  color: #ff0000;
+}
+.form-container {
+  border: 2px solid #ff5f5f; /* กรอบรอบๆ ฟอร์ม */
+  padding: 20px;
+  border-radius: 10px; /* ทำมุมให้โค้ง */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเล็กน้อย */
+}
+.wrapper {
+  width: 20px; /* ความกว้าง */
+  height: 20px; /* ความสูง */
+  margin: 0 auto; /* จัดให้อยู่กึ่งกลาง */
+  margin-left: 500px;
+  margin-top: -1px; /* ระยะห่างด้านบน */
+  border-radius: 10%; /* มุมโค้งมน */
+  position: relative; /* ตั้งตำแหน่งให้ใช้งานกับ absolute ได้ */
+  cursor: pointer; /* เปลี่ยน cursor เมื่อ hover */
+  display: none;
+  z-index: 1052;
+}
+.bar {
+  width: 35px; /* ความกว้าง */
+  height: 8px; /* ความสูง */
+  border: 2px solid rgb(255, 255, 255); /* ขอบสีขาว */
+  position: absolute; /* ตำแหน่ง absolute ภายใน wrapper */
+  border-radius: 10px; /* มุมโค้งมน */
+  transition: all 0.5s; /* ตั้ง transition */
+  background-color: transparent; /* พื้นหลังโปร่งใส */
+}
+
+/* ตำแหน่งแถบด้านบน */
+.top {
+  left: -150%;
+  top: -25%;
+}
+/* ตำแหน่งแถบตรงกลาง */
+.middle {
+  left: -150%;
+  top: 36%;
+}
+/* ตำแหน่งแถบล่าง */
+.bottom {
+  left: -150%;
+  top: 98%;
+}
+.wrapper:hover .bar {
+  background-color: rgb(255, 255, 255);
+}
+/* สไตล์ hamburger icon เมื่อคลิก */
+.wrapper.active .top {
+  transform: rotate(45deg); /* หมุน */
+  top: 40%; /* ตำแหน่งแนวตั้ง */
+  background-color: rgb(255, 255, 255);
+}
+
+.wrapper.active .middle {
+  opacity: 0;
+} /* ซ่อนแถบกลาง */
+
+.wrapper.active .bottom {
+  transform: rotate(-45deg); /* หมุน */
+  top: 40%;
+  background-color: rgb(255, 255, 255);
+}
+.menu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  max-width: 300px; /* จำกัดความกว้างเมนู */
+  margin: 0 auto; /* จัดให้อยู่กึ่งกลางหน้าจอ */
+  background-color: #ffffff;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: none; /* ซ่อนเมนู */
+  z-index: 1051;
+}
+.menu.show {
+  display: block;
+}
+.custom-grid {
+  display: grid;
+  gap: 16px;
+}
+
+/* Mobile: 1 column */
+.custom-grid {
+  grid-template-columns: 1fr;
+}
+/* สํ
+    าหรับแท็บเล็ต */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  nav a {
-    color: #ffffff;
-    font-size: 15px;
-    text-decoration: none;
+
+  .filters {
     display: flex;
-    align-items: center; /* จัดตำแหน่งข้อความในแนวตั้ง */
-    justify-content: center; /* จัดตำแหน่งข้อความในแนวนอน */
-    line-height: normal; /* ปรับให้ข้อความอยู่ในตำแหน่งที่พอดี */
-    padding: 10px 20px; /* เพิ่มระยะห่างภายใน */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
   }
-  
-  nav a.active {
-    color: #fffb00;
-    font-size: 60px;
-    line-height: normal; /* ปรับความสูงของบรรทัดให้พอดี */
-    text-align: center;
+
+  .filter-btn {
+    flex: 0 1 calc(50% - 1rem);
   }
   .box1-link {
-    display: inline-block;
-    padding: 10px 30px;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
-    text-align: center;
-    font-size: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-
-  }
-  .box1-link:hover {
-    background-color: #9babc0;
-    color: #000000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.1);
-  }
-  main {
-    font-family: "Arial", sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #2e2e2e;
-    background-color: #ffffff;
-    padding: 1rem;
-    max-width: 800px;
-    animation: slideIn 1s ease-out;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-  .number {
-    text-align: start;
-  }
-  .image {
-    display: block; /* ทำให้ภาพเป็นบล็อก */
-    margin: 0 auto; /* จัดกึ่งกลาง */
-    max-width: 100%; /* จำกัดขนาดภาพไม่เกินความกว้างของจอ */
-    height: auto; /* รักษาอัตราส่วนของภาพ */
-    border: 5px solid #ffcc00; /* เพิ่มกรอบ */
-    border-radius: 10px; /* ทำมุมภาพโค้ง */
-    animation: slideIn 1s ease-out;
-  }
-  
-  
-  p {
-    text-indent: 50px;
-    font-size: larger;
-  }
-  .special-heading {
-    color: #ff0000;
-  }
-  .form-container {
-    border: 2px solid #ff5f5f; /* กรอบรอบๆ ฟอร์ม */
-    padding: 20px;
-    border-radius: 10px; /* ทำมุมให้โค้ง */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเล็กน้อย */
+    display: none;
   }
   .wrapper {
-    width: 20px; /* ความกว้าง */
-    height: 20px; /* ความสูง */
-    margin: 0 auto; /* จัดให้อยู่กึ่งกลาง */
+    display: block;
     margin-left: 500px;
-    margin-top: -1px; /* ระยะห่างด้านบน */
-    border-radius: 10%; /* มุมโค้งมน */
-    position: relative; /* ตั้งตำแหน่งให้ใช้งานกับ absolute ได้ */
-    cursor: pointer; /* เปลี่ยน cursor เมื่อ hover */
-    display: none;
-    z-index: 1051;
-  }
-  .bar {
-    width: 35px; /* ความกว้าง */
-    height: 8px; /* ความสูง */
-    border: 2px solid rgb(255, 255, 255); /* ขอบสีขาว */
-    position: absolute; /* ตำแหน่ง absolute ภายใน wrapper */
-    border-radius: 10px; /* มุมโค้งมน */
-    transition: all 0.5s; /* ตั้ง transition */
-    background-color: transparent; /* พื้นหลังโปร่งใส */
-  }
-  
-  /* ตำแหน่งแถบด้านบน */
-  .top {
-    left: -150%;
-    top: -25%;
-  }
-  /* ตำแหน่งแถบตรงกลาง */
-  .middle {
-    left: -150%;
-    top: 36%;
-  }
-  /* ตำแหน่งแถบล่าง */
-  .bottom {
-    left: -150%;
-    top: 98%;
-  }
-  .wrapper:hover .bar {
-    background-color: rgb(255, 255, 255);
-  }
-  /* สไตล์ hamburger icon เมื่อคลิก */
-  .wrapper.active .top {
-    transform: rotate(45deg); /* หมุน */
-    top: 40%; /* ตำแหน่งแนวตั้ง */
-    background-color: rgb(255, 255, 255);
-  }
-  
-  .wrapper.active .middle {
-    opacity: 0;
-  } /* ซ่อนแถบกลาง */
-  
-  .wrapper.active .bottom {
-    transform: rotate(-45deg); /* หมุน */
-    top: 40%;
-    background-color: rgb(255, 255, 255);
   }
   .menu {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    max-width: 300px; /* จำกัดความกว้างเมนู */
-    margin: 0 auto; /* จัดให้อยู่กึ่งกลางหน้าจอ */
-    background-color: #ffffff;
-    color: black;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    display: none; /* ซ่อนเมนู */
-    z-index: 1051;
+    top: 50px;
+    left: 10px;
+    right: 10px;
   }
-  .menu.show {
-    display: block;
+  .container {
+    grid-template-columns: repeat(2, 1fr);
   }
   .custom-grid {
-    display: grid;
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
   }
+  .row-cols-sm-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-  /* Mobile: 1 column */
-  .custom-grid {
+/* สํ
+       าหรับมือถือ */
+@media (max-width: 480px) {
+  .gallery {
     grid-template-columns: 1fr;
   }
-  /* สํ
-    าหรับแท็บเล็ต */
-  @media (max-width: 768px) {
-    .gallery {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-    }
-  
-    .filter-btn {
-      flex: 0 1 calc(50% - 1rem);
-    }
-    .box1-link {
-      display: none;
-    }
-    .wrapper {
-      display: block;
-      margin-left: 500px;
-    }
-    .menu {
-      top: 50px;
-      left: 10px;
-      right: 10px;
-    }
-    .container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .custom-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .row-cols-sm-2 {
-        grid-template-columns: repeat(2, 1fr);
-      }
-}
-      
-  
-  /* สํ
-       าหรับมือถือ */
-  @media (max-width: 480px) {
-    .gallery {
-      grid-template-columns: 1fr;
-    }
-  
-    .filter-btn {
-      flex: 1 1 100%;
-    }
-  
-    .header h1 {
-      font-size: 1.5rem;
-    }
-    .box1-link {
-      display: none;
-    }
-    .wrapper {
-      display: block;
-      margin-left: 120px;
-    }
-    .menu {
-      max-width: 90%; /* ใช้เกือบเต็มจอมือถือ */
-      left: 5%;
-      right: 5%;
-    }
-    main {
-      max-width: 100%;
-    }
-    .image {
-      max-width: 90%; /* ลดขนาดภาพให้พอดีกับมือถือ */
-    }
-    @media (min-width: 1024px) {
-        .custom-grid {
-          grid-template-columns: repeat(4, 1fr);
-        }
-      }
-  }
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden;
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    font-family: prompt, sans-serif;
-  }
-  @keyframes slideIn {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  .carousel-item {
-    text-align: center;
-  }
-  
-  .carousel-image {
-    width: 100%;
-    height: 500px; /* Fixed height for uniformity */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+
+  .filter-btn {
+    flex: 1 1 100%;
   }
 
-  .carousel-control-prev-icon
-  {
-    width: 30px;
-    height: 30px;
-    margin-top: 150%;
-    background-size: 50%;
-     margin-left: 50%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border-radius: 50%; /* Circular buttons */
-    z-index: 1001;
+  .header h1 {
+    font-size: 1.5rem;
   }
-  .carousel-control-next-icon {
-    width: 30px;
-    height: 30px;
-    margin-top: 150%;
-    margin-right: 50%;
-
-    background-size: 50%;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border-radius: 50%; /* Circular buttons */
+  .box1-link {
+    display: none;
   }
-
-  .carousel-control-prev,
-  .carousel-control-next {
-    top: -50%;
-    transform: translateY(-50%); /* Center the controls vertically */
+  .wrapper {
+    display: block;
+    margin-left: 120px;
   }
-
-  .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for captions */
-    padding: 10px;
-    border-radius: 5px;
-   margin-bottom: -20px;
+  .menu {
+    max-width: 90%; /* ใช้เกือบเต็มจอมือถือ */
+    left: 5%;
+    right: 5%;
   }
-  .m1 {
-    display: block; /* ทำให้ภาพเป็นบล็อก */
-    margin: 0 auto; /* จัดกึ่งกลาง */
-    max-width: 100%; /* จำกัดขนาดภาพไม่เกินความกว้างของจอ */
-    height: 500; /* รักษาอัตราส่วนของภาพ */
-    border: 5px solid #ffcc00; /* เพิ่มกรอบ */
-    border-radius: 10px; /* ทำมุมภาพโค้ง */
-    animation: slideIn 1s ease-out;
-  }
-  /* กำหนดขนาดความสูง */
-.navbar {
-    height: 80px; /* กำหนดความสูงของ Navbar */
-  }
-  
-  /* ปรับขนาดตัวอักษร */
-  .navbar-brand {
-    font-size: 50px; /* ขนาดตัวอักษรของชื่อแบรนด์ */
-  }
-  
-  .navbar-nav .nav-item .nav-link {
-    font-size: 18px; /* ขนาดตัวอักษรของลิงก์ */
-  }
-  .navbar {
-    display: flex;
-    align-items: center; /* จัดให้อยู่แนวเดียวกัน */
-    justify-content: space-between; /* เว้นระยะห่างระหว่างกลุ่ม */
-    padding: 1rem 1rem; /* ระยะห่างภายใน */
-    animation: slideIn 1s ease-out;
-    height: 20%;
-  }
-  
-  /* ปรับ Padding ของ Navbar */
-  .navbar .navbar-brand {
-    margin-right: auto; /* ผลักให้อยู่ด้านซ้ายสุด */
-  }
-  
-  .navbar .box1-link {
-    margin-left: 1rem; /* ระยะห่างระหว่างลิงก์ */
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-  }
-  
-  .navbar .box1-link:hover {
-    text-decoration: underline; /* เพิ่มเส้นใต้เมื่อ hover */
-  }
-  
-  /* Search Box */
-  .navbar .d-flex {
-    margin-left: auto; /* ผลักให้ไปทางขวาสุด */
-    display: flex;
-    align-items: center;
-  }
-  .navbar-toggler {
-    z-index: 1050; /* ให้สูงกว่าปุ่ม carousel */
-  }
-  .nav-item {
-    z-index: 1050;
+  main {
     max-width: 100%;
-    background-color: #000000; /* พื้นหลังสีดำ */
-    padding: 10px 20px; /* ระยะห่างภายใน */
-    border-radius: 8px; /* มุมโค้ง (เอาออกถ้าไม่ต้องการ) */
-    margin: 5px 0; /* ระยะห่างระหว่างเมนู */
   }
-  
-  .nav-item a {
+  .image {
+    max-width: 90%; /* ลดขนาดภาพให้พอดีกับมือถือ */
+  }
+ 
+}
+@media (min-width: 1024px) {
+  .custom-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
-    color: rgb(7, 5, 5); /* สีข้อความ */
-    text-decoration: none; /* ลบเส้นใต้ */
-    display: block; /* ให้คลิกได้ทั้งกล่อง */
-    text-align: center; /* จัดข้อความให้อยู่กลาง */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: prompt, sans-serif;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
   }
-  
-  .nav-item a:hover {
-    background-color: #444444; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
-    color: #f1c40f; /* สีข้อความเมื่อ hover */
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
- 
- 
-  
-  
+}
+.carousel-item {
+  text-align: center;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 500px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.carousel-control-prev-icon {
+  width: 30px;
+  height: 30px;
+  margin-top: 150%;
+  background-size: 50%;
+  margin-left: 50%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 50%; /* Circular buttons */
+  z-index: 1001;
+}
+.carousel-control-next-icon {
+  width: 30px;
+  height: 30px;
+  margin-top: 150%;
+  margin-right: 50%;
+
+  background-size: 50%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 50%; /* Circular buttons */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  top: -50%;
+  transform: translateY(-50%); /* Center the controls vertically */
+}
+
+.carousel-caption {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for captions */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: -20px;
+}
+.m1 {
+  display: block; /* ทำให้ภาพเป็นบล็อก */
+  margin: 0 auto; /* จัดกึ่งกลาง */
+  max-width: 100%; /* จำกัดขนาดภาพไม่เกินความกว้างของจอ */
+  height: 500; /* รักษาอัตราส่วนของภาพ */
+  border: 5px solid #ffcc00; /* เพิ่มกรอบ */
+  border-radius: 10px; /* ทำมุมภาพโค้ง */
+  animation: slideIn 1s ease-out;
+}
+/* กำหนดขนาดความสูง */
+.navbar {
+  height: 80px; /* กำหนดความสูงของ Navbar */
+}
+
+/* ปรับขนาดตัวอักษร */
+.navbar-brand {
+  font-size: 25px; /* ขนาดตัวอักษรของชื่อแบรนด์ */
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-size: 18px; /* ขนาดตัวอักษรของลิงก์ */
+}
+.navbar {
+  display: flex;
+  align-items: center; /* จัดให้อยู่แนวเดียวกัน */
+  justify-content: space-between; /* เว้นระยะห่างระหว่างกลุ่ม */
+  padding: 1rem 1rem; /* ระยะห่างภายใน */
+  animation: slideIn 1s ease-out;
+  height: 20%;
+}
+
+/* ปรับ Padding ของ Navbar */
+.navbar .navbar-brand {
+  margin-right: auto; /* ผลักให้อยู่ด้านซ้ายสุด */
+}
+
+.navbar .box1-link {
+  margin-left: 1rem; /* ระยะห่างระหว่างลิงก์ */
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.navbar .box1-link:hover {
+  text-decoration: underline; /* เพิ่มเส้นใต้เมื่อ hover */
+}
+
+/* Search Box */
+.navbar .d-flex {
+  margin-left: auto; /* ผลักให้ไปทางขวาสุด */
+  display: flex;
+  align-items: center;
+}
+.navbar-toggler {
+  z-index: 1050; /* ให้สูงกว่าปุ่ม carousel */
+}
+.nav-item {
+  z-index: 1050;
+  max-width: 100%;
+  background-color: #000000; /* พื้นหลังสีดำ */
+  padding: 10px 20px; /* ระยะห่างภายใน */
+  border-radius: 8px; /* มุมโค้ง (เอาออกถ้าไม่ต้องการ) */
+  margin: 5px 0; /* ระยะห่างระหว่างเมนู */
+}
+
+.nav-item a {
+  color: rgb(7, 5, 5); /* สีข้อความ */
+  text-decoration: none; /* ลบเส้นใต้ */
+  display: block; /* ให้คลิกได้ทั้งกล่อง */
+  text-align: center; /* จัดข้อความให้อยู่กลาง */
+}
+
+.nav-item a:hover {
+  background-color: #444444; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+  color: #f1c40f; /* สีข้อความเมื่อ hover */
+}
+.card {
+  animation: slideIn 1s ease-out;
+}
+
