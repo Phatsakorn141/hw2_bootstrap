@@ -46,7 +46,7 @@ header {
     font-weight: bold;
     border-radius: 20px;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
-      box-shadow 0.3s ease;
+    box-shadow 0.3s ease;
     text-align: center;
     font-size: 20px;
     margin-left: 5px;
@@ -86,6 +86,7 @@ header {
   
   p {
     text-indent: 50px;
+    font-size: larger;
   }
   .special-heading {
     color: #ff0000;
@@ -106,7 +107,7 @@ header {
     position: relative; /* ตั้งตำแหน่งให้ใช้งานกับ absolute ได้ */
     cursor: pointer; /* เปลี่ยน cursor เมื่อ hover */
     display: none;
-    z-index: 1001;
+    z-index: 1051;
   }
   .bar {
     width: 35px; /* ความกว้าง */
@@ -134,13 +135,13 @@ header {
     top: 98%;
   }
   .wrapper:hover .bar {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
   }
   /* สไตล์ hamburger icon เมื่อคลิก */
   .wrapper.active .top {
     transform: rotate(45deg); /* หมุน */
     top: 40%; /* ตำแหน่งแนวตั้ง */
-    background-color: white;
+    background-color: rgb(255, 255, 255);
   }
   
   .wrapper.active .middle {
@@ -150,7 +151,7 @@ header {
   .wrapper.active .bottom {
     transform: rotate(-45deg); /* หมุน */
     top: 40%;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
   }
   .menu {
     position: fixed;
@@ -165,6 +166,7 @@ header {
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     display: none; /* ซ่อนเมนู */
+    z-index: 1051;
   }
   .menu.show {
     display: block;
@@ -258,5 +260,100 @@ header {
   .carousel-item {
     text-align: center;
   }
+  
+  .carousel-image {
+    width: 100%;
+    height: 500px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+  }
+
+  .carousel-control-prev-icon
+  {
+    width: 30px;
+    height: 30px;
+    margin-top: 150%;
+    background-size: 50%;
+     margin-left: 50%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 50%; /* Circular buttons */
+    z-index: 1001;
+  }
+  .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+    margin-top: 150%;
+    margin-right: 50%;
+
+    background-size: 50%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 50%; /* Circular buttons */
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: -50%;
+    transform: translateY(-50%); /* Center the controls vertically */
+  }
+
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for captions */
+    padding: 10px;
+    border-radius: 5px;
+   margin-bottom: -20px;
+  }
+  .m1 {
+    display: block; /* ทำให้ภาพเป็นบล็อก */
+    margin: 0 auto; /* จัดกึ่งกลาง */
+    max-width: 100%; /* จำกัดขนาดภาพไม่เกินความกว้างของจอ */
+    height: 500; /* รักษาอัตราส่วนของภาพ */
+    border: 5px solid #ffcc00; /* เพิ่มกรอบ */
+    border-radius: 10px; /* ทำมุมภาพโค้ง */
+    animation: slideIn 1s ease-out;
+  }
+  /* กำหนดขนาดความสูง */
+.navbar {
+    height: 80px; /* กำหนดความสูงของ Navbar */
+  }
+  
+  /* ปรับขนาดตัวอักษร */
+  .navbar-brand {
+    font-size: 24px; /* ขนาดตัวอักษรของชื่อแบรนด์ */
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    font-size: 18px; /* ขนาดตัวอักษรของลิงก์ */
+  }
+  
+  /* ปรับ Padding ของ Navbar */
+  .navbar {
+    padding: 10px 20px; /* เพิ่มพื้นที่ภายใน */
+  }
+  .navbar-toggler {
+    z-index: 1050; /* ให้สูงกว่าปุ่ม carousel */
+  }
+  .nav-item {
+    z-index: 1050;
+    max-width: 100%;
+    background-color: #000000; /* พื้นหลังสีดำ */
+    padding: 10px 20px; /* ระยะห่างภายใน */
+    border-radius: 8px; /* มุมโค้ง (เอาออกถ้าไม่ต้องการ) */
+    margin: 5px 0; /* ระยะห่างระหว่างเมนู */
+  }
+  
+  .nav-item a {
+
+    color: rgb(7, 5, 5); /* สีข้อความ */
+    text-decoration: none; /* ลบเส้นใต้ */
+    display: block; /* ให้คลิกได้ทั้งกล่อง */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+  }
+  
+  .nav-item a:hover {
+    background-color: #444444; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+    color: #f1c40f; /* สีข้อความเมื่อ hover */
+  }
+  
+ 
   
   
