@@ -10,3 +10,8 @@
 - git commit -m "ปรับแต่งnav bar"
 - git add .
 - git commit -m "ทำcolumแต่ละหน้า"
+- git add .
+- git commit -m "ปับแบบฟอร์มติดต่อ"
+- git add .
+- git commit -m "Finish"
+- git push
