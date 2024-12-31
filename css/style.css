@@ -51,6 +51,7 @@ header {
     font-size: 20px;
     margin-left: 5px;
     margin-right: 5px;
+
   }
   .box1-link:hover {
     background-color: #9babc0;
@@ -318,16 +319,40 @@ header {
   
   /* ปรับขนาดตัวอักษร */
   .navbar-brand {
-    font-size: 24px; /* ขนาดตัวอักษรของชื่อแบรนด์ */
+    margin-left: -600%;
+    font-size: 50px; /* ขนาดตัวอักษรของชื่อแบรนด์ */
   }
   
   .navbar-nav .nav-item .nav-link {
     font-size: 18px; /* ขนาดตัวอักษรของลิงก์ */
   }
+  .navbar {
+    display: flex;
+    align-items: center; /* จัดให้อยู่แนวเดียวกัน */
+    justify-content: space-between; /* เว้นระยะห่างระหว่างกลุ่ม */
+    padding: 0.5rem 1rem; /* ระยะห่างภายใน */
+  }
   
   /* ปรับ Padding ของ Navbar */
-  .navbar {
-    padding: 10px 20px; /* เพิ่มพื้นที่ภายใน */
+  .navbar .navbar-brand {
+    margin-right: auto; /* ผลักให้อยู่ด้านซ้ายสุด */
+  }
+  
+  .navbar .box1-link {
+    margin-left: 1rem; /* ระยะห่างระหว่างลิงก์ */
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  
+  .navbar .box1-link:hover {
+    text-decoration: underline; /* เพิ่มเส้นใต้เมื่อ hover */
+  }
+  
+  /* Search Box */
+  .navbar .d-flex {
+    margin-left: auto; /* ผลักให้ไปทางขวาสุด */
+    display: flex;
+    align-items: center;
   }
   .navbar-toggler {
     z-index: 1050; /* ให้สูงกว่าปุ่ม carousel */
@@ -353,7 +378,7 @@ header {
     background-color: #444444; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
     color: #f1c40f; /* สีข้อความเมื่อ hover */
   }
-  
+ 
  
   
   
